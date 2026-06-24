@@ -21,7 +21,13 @@ body {
     -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
 }
 .header p { color:#888780; font-size:14px; }
-
+.logo {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
 .nav {
     display:flex; gap:8px; margin-bottom:1.5rem;
     background:white; padding:6px; border-radius:14px;
@@ -186,8 +192,8 @@ body {
 <body>
 <div class="container">
     <div class="header">
-        <h1>✨ Minha Transformação</h1>
-        <p id="greeting">Bom dia, querida!</p>
+        <img src="logo.png" alt="Minha Transformação" class="logo">
+        <p id="greeting">Bom dia, Carol!</p>
     </div>
 
     <div class="nav">
@@ -508,9 +514,9 @@ function closeTimer() {
 function updateGreeting() {
     var hour = new Date().getHours();
     var g = document.getElementById('greeting');
-    if (hour >= 5 && hour < 13) g.textContent = 'Bom dia, querida! ☀️ Vamos elevar sua vibração?';
-    else if (hour >= 13 && hour < 18) g.textContent = 'Boa tarde, querida! 🌤️';
-    else g.textContent = 'Boa noite, querida! 🌙 Vamos liberar e transformar?';
+    if (hour >= 5 && hour < 13) g.textContent = 'Bom dia, Carol! ☀️ Vamos elevar sua vibração?';
+    else if (hour >= 13 && hour < 18) g.textContent = 'Boa tarde, Carol! 🌤️';
+    else g.textContent = 'Boa noite, Carol! 🌙 Vamos liberar e transformar?';
 }
 
 function setDayHint() {
